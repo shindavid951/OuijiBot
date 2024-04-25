@@ -13,7 +13,7 @@ class FateCard(Card):
         self.effect = effect
 
 class UnitCard(Card):
-    def __init__(self, name, cost, color, image, attacks: Dict[range, (str, int)], effects=None, stars=0, status=None):
+    def __init__(self, name, cost, color, image, attacks: Dict[range, tuple], effects=None, stars=0, status=None):
         super().__init__(name, cost, color, image)
         self.attacks = attacks
         self.effects = effects
