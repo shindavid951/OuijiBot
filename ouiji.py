@@ -19,4 +19,4 @@ class Ouiji(commands.Cog):
             await ctx.send(f"I'd like to duel with you, but I can't. {str(discord.utils.get(self.bot.emojis, name='defeat'))}")
         else:
             await ctx.send("It's time to duel!")
-            await Game(self.bot, ctx.message.server).play(ctx)
+            await Game(self.bot, ctx.message.server).play(ctx, ctx.author, member)
