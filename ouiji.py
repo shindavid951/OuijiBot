@@ -48,9 +48,9 @@ class Ouiji(commands.Cog):
             if response.content.lower() == "yes":
                 await ctx.send("It's time to duel!")
                 players = [Player(ctx.author), Player(member)]
-                playerOne = players[randint(0, 1)]
-                playerTwo = players[1] if playerOne == players[0] else players[0]
-                await Game(self.bot, ctx.message.guild).play(ctx, playerOne, playerTwo)
+                player_one = players[randint(0, 1)]
+                player_two = players[1] if player_one == players[0] else players[0]
+                await Game(self.bot, ctx.message.guild).play(ctx, player_one, player_two)
             else:
                 await ctx.send("Duel declined.")
                 return
