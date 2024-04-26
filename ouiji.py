@@ -11,7 +11,7 @@ class Ouiji(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
-    @commands.command(pass_context=True)
+    @commands.command()
     async def play(self, ctx: commands.Context, member: discord.Member = None):
         """Ping the user you want to duel!"""
         channel_id = ctx.channel.id
