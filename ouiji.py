@@ -2,7 +2,6 @@ from discord.ext import commands
 from game import Game
 from player import Player
 import discord
-import PIL.Image
 from random import randint
 
 class Ouiji(commands.Cog):
