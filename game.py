@@ -1,6 +1,5 @@
 import discord
 import PIL.Image
-from typing import List
 from discord.ext import commands
 from deck import Deck
 from player import Player
