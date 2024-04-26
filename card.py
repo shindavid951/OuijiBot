@@ -22,8 +22,8 @@ class UnitCard(Card):
 
 class AssuredCancer(FateCard):
     def __init__(self):
-        effectText = "Choose a Unit. That Unit cannot Perish this turn, regardless of any other effects."
-        super().__init__("Assured Cancer", 1, "Sapphire", "./card_images/AssuredCancer.png", effectText)
+        effect_text = "Choose a Unit. That Unit cannot Perish this turn, regardless of any other effects."
+        super().__init__("Assured Cancer", 1, "Sapphire", "./card_images/AssuredCancer.png", effect_text)
 
 class BlazingAries(UnitCard):
     def __init__(self):
@@ -57,8 +57,8 @@ class CalmRabbitFestival(UnitCard):
 
 class CapricornAssistance(FateCard):
     def __init__(self):
-        effectText = "Return a Unit you control to your hand. Remove all status effects, stars, and card effects from that card. Gain 1 Spirit."
-        super().__init__("Capricorn Assitance", 1, "Emerald", "./card_images/CapricornAssitance.png", effectText)
+        effect_text = "Return a Unit you control to your hand. Remove all status effects, stars, and card effects from that card. Gain 1 Spirit."
+        super().__init__("Capricorn Assitance", 1, "Emerald", "./card_images/CapricornAssitance.png", effect_text)
 
 class CrushingEmperor(UnitCard):
     def __init__(self):
@@ -81,8 +81,8 @@ class CuriousMonkeys(UnitCard):
 
 class DayOfSheep(FateCard):
     def __init__(self):
-        effectText = "Skip the Combat Phase of this turn. You may lose a Spirit. If you do, draw a card."
-        super().__init__("Day of Sheep", 1, "Amethyst", "./card_images/DayOfSheep.png", effectText)
+        effect_text = "Skip the Combat Phase of this turn. You may lose a Spirit. If you do, draw a card."
+        super().__init__("Day of Sheep", 1, "Amethyst", "./card_images/DayOfSheep.png", effect_text)
 
 class DeathLingerer(UnitCard):
     def __init__(self):
@@ -182,8 +182,8 @@ class JusticeOfNaught(UnitCard):
 
 class LaughingSnake(FateCard):
     def __init__(self):
-        effectText = "Your opponent discards a card from their hand. If they cannot, a Unit you control gains 1 star."
-        super().__init__("Laughing Snake", 1, "Emerald", "./card_images/LaughingSnake.png", effectText)
+        effect_text = "Your opponent discards a card from their hand. If they cannot, a Unit you control gains 1 star."
+        super().__init__("Laughing Snake", 1, "Emerald", "./card_images/LaughingSnake.png", effect_text)
 
 class LoneHighPriestess(UnitCard):
     def __init__(self):
@@ -194,14 +194,14 @@ class LoneHighPriestess(UnitCard):
         super().__init__("The Lone High Priestess", 0, "Sapphire", "./card_images/LoneHighPriestess.png", attacks)
 
 class LoversBeneath(UnitCard):
-    def __init__(self, attacksUsed=[False, False]):
+    def __init__(self, attacks_used=[False, False]):
         attacks = {
             range(40): ("Together the Same", "Sapphire", 30),
             range(40, 80): ("And So To Remain", "Sapphire", 30),
             range(80, 100): ("If both attacks have been used, draw a card.", "Orange", 0)
         }
         super().__init__("Lovers Beneath", 1, "Sapphire", "./card_images/LoversBeneath.png", attacks)
-        self.attacksUsed = attacksUsed
+        self.attacks_used = attacks_used
 
 class LoyalDog(UnitCard):
     def __init__(self):
@@ -226,8 +226,8 @@ class LuckyDragon(UnitCard):
 
 class MimicHorse(FateCard):
     def __init__(self):
-        effectText = "Copy the effects of another Fate Card in your hand to use as this card's effect."
-        super().__init__("Mimic Horse", 1, "Ruby", "./card_images/MimicHorse.png", effectText)
+        effect_text = "Copy the effects of another Fate Card in your hand to use as this card's effect."
+        super().__init__("Mimic Horse", 1, "Ruby", "./card_images/MimicHorse.png", effect_text)
 
 class MoonlightEmbassy(UnitCard):
     def __init__(self):
@@ -247,23 +247,23 @@ class NobleChariot(UnitCard):
 
 class PageOfLostSword(FateCard):
     def __init__(self):
-        effectText = "If you control a Sapphire Unit, draw 2 cards and roll a d6. If the result is a 6, all Units get the Forgotten status."
-        super().__init__("Page of Lost Sword", 0, "Sapphire", "./card_images/PageOfLostSword.png", effectText)
+        effect_text = "If you control a Sapphire Unit, draw 2 cards and roll a d6. If the result is a 6, all Units get the Forgotten status."
+        super().__init__("Page of Lost Sword", 0, "Sapphire", "./card_images/PageOfLostSword.png", effect_text)
 
 class PageOfPentaclesGrace(FateCard):
     def __init__(self):
-        effectText = "If you control a Ruby Unit, draw 2 cards and your opponent is a fucking idiot. Choose an enemy Unit. It gets the Depressed status."
-        super().__init__("Page of Pentacles Grace", 0, "Ruby", "./card_images/PageOfPentaclesGrace", effectText)
+        effect_text = "If you control a Ruby Unit, draw 2 cards and your opponent is a fucking idiot. Choose an enemy Unit. It gets the Depressed status."
+        super().__init__("Page of Pentacles Grace", 0, "Ruby", "./card_images/PageOfPentaclesGrace", effect_text)
 
 class PageOfWandsAhold(FateCard):
     def __init__(self):
-        effectText = "If you control an Emerald Unit, draw 2 cards. Choose an enemy Unit. It gets the Poisoned status."
-        super().__init__("Page of Wands Ahold", 0, "Emerald", "./card_images/PageOfWandsAhold.png", effectText)
+        effect_text = "If you control an Emerald Unit, draw 2 cards. Choose an enemy Unit. It gets the Poisoned status."
+        super().__init__("Page of Wands Ahold", 0, "Emerald", "./card_images/PageOfWandsAhold.png", effect_text)
 
 class PiscesPondLuck(FateCard):
     def __init__(self):
-        effectText = "If you have only this card in your hand, draw 3 cards."
-        super().__init__("Pisces Pond Luck", 1, "Sapphire", "./card_images/PiscesPondLuck.png", effectText)
+        effect_text = "If you have only this card in your hand, draw 3 cards."
+        super().__init__("Pisces Pond Luck", 1, "Sapphire", "./card_images/PiscesPondLuck.png", effect_text)
 
 class PoisonousMagician(UnitCard):
     def __init__(self):
@@ -290,8 +290,8 @@ class SagittariusHunter(UnitCard):
 
 class ScorpioLethality(FateCard):
     def __init__(self):
-        effectText = "Perish an enemy Unit or Poison an enemy Unit."
-        super().__init__("Scorpio Lethality", 1, "Emerald", "./card_images/ScorpioLethality.png", effectText)
+        effect_text = "Perish an enemy Unit or Poison an enemy Unit."
+        super().__init__("Scorpio Lethality", 1, "Emerald", "./card_images/ScorpioLethality.png", effect_text)
 
 class StarMellowLight(UnitCard):
     def __init__(self):
@@ -319,8 +319,8 @@ class StrengthAbove(UnitCard):
 
 class SunsSteedLeo(FateCard):
     def __init__(self):
-        effectText = "Choose a Unit. That Unit gets +20 Attack Power to each Attack it has until the end of the turn. If you chose a Ruby Unit, draw a card."
-        super().__init__("The Sun's Steed, Leo", 1, "Ruby", "./card_image/Sun'sSteedLeo", effectText)
+        effect_text = "Choose a Unit. That Unit gets +20 Attack Power to each Attack it has until the end of the turn. If you chose a Ruby Unit, draw a card."
+        super().__init__("The Sun's Steed, Leo", 1, "Ruby", "./card_image/Sun'sSteedLeo", effect_text)
 
 class SunOfSonglett(UnitCard):
     def __init__(self):
@@ -392,16 +392,16 @@ class VictorysOx(UnitCard):
 
 class VirgosHarvest(FateCard):
     def __init__(self):
-        effectText = "Remove a status effect from a Unit. If the chosen Unit Perishes an enemy Unit this turn, it gains 2 stars instead of 1."
-        super().__init__("Virgo's Harvest", 1, "Ruby", "./card_images/Virgo'sHarvest.png", effectText)
+        effect_text = "Remove a status effect from a Unit. If the chosen Unit Perishes an enemy Unit this turn, it gains 2 stars instead of 1."
+        super().__init__("Virgo's Harvest", 1, "Ruby", "./card_images/Virgo'sHarvest.png", effect_text)
 
 class WealthyRat(FateCard):
     def __init__(self):
-        effectText = "Lose any amount of Spirits. Draw cards equal to the number of Spirits spent."
-        super().__init__("Wealthy Rat", 1, "Amethyst", "./card_images/WealthyRat.png", effectText)
+        effect_text = "Lose any amount of Spirits. Draw cards equal to the number of Spirits spent."
+        super().__init__("Wealthy Rat", 1, "Amethyst", "./card_images/WealthyRat.png", effect_text)
 
 class WheelOfFortune(UnitCard):
-    def __init__(self, attacksUsed = [False, False, False]):
+    def __init__(self, attacks_used = [False, False, False]):
         attacks = {
             range(20): ("Bull Gore", "Ruby", 40),
             range(20, 40): ("Angel Ray", "Sapphire", 30),
@@ -410,7 +410,7 @@ class WheelOfFortune(UnitCard):
             range(80, 100): ("Miss", "White", 0)
         }
         super().__init__("Wheel of Fortune", 1, "Ruby", "./card_images/WheelOfFortune.png", attacks)
-        self.attacksUsed = attacksUsed
+        self.attacks_used = attacks_used
 
 class WiseHierophant(UnitCard):
     def __init__(self):
