@@ -1,9 +1,11 @@
 from discord.ext import commands
 from game import Game
+from player import Player
 import asyncio
 import discord
 import sys
 import PIL.Image
+from random import randint
 
 class Ouiji(commands.Cog):
     def __init__(self, bot: commands.Bot):
@@ -45,7 +47,10 @@ class Ouiji(commands.Cog):
             response = await self.bot.wait_for('message', check=check)
             if response.content.lower() == "yes":
                 await ctx.send("It's time to duel!")
-                await Game(self.bot, ctx.message.server).play(ctx, ctx.author, member)
+                players = [Player(ctx.author), Player(member)]
+                playerOne = players[randint(0, 1)]
+                playerTwo = players[1] if playerOne == players[0] else players[0]
+                await Game(self.bot, ctx.message.guild).play(ctx, playerOne, playerTwo)
             else:
                 await ctx.send("Duel declined.")
                 return
