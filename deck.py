@@ -6,6 +6,7 @@ class Deck():
             FoolishIndecisive,
             PoisonousMagician,
             LoneHighPriestess,
+            VengefulEmpress,
             CrushingEmperor,
             WiseHierophant,
             LoversBeneath,
