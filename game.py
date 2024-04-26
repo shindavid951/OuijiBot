@@ -21,13 +21,13 @@ class Game(object):
             self.drawPhase(currentPlayer, True)
             self.mainPhase(currentPlayer)
             self.turn += 1
-        self.combatPhase(currentPlayer)
+        self.combatPhase()
         # Main gameplay loop
         while (not self.detect_win(player_one, player_two)):
             currentPlayer = [player_one, player_two][self.turn % 2]
             self.drawPhase(currentPlayer)
             self.mainPhase(currentPlayer)
-            self.combatPhase(currentPlayer)
+            self.combatPhase()
             self.turn += 1
     
     async def drawPhase(self, ctx: commands.Context, player: Player, firstTurn=False):
