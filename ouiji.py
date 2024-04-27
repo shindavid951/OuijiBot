@@ -33,7 +33,7 @@ class Ouiji(commands.Cog):
                 players = [Player(ctx.author), Player(member)]
                 player_one = players[randint(0, 1)]
                 player_two = players[1] if player_one == players[0] else players[0]
-                await Game(self.bot, ctx.message.guild).play(ctx, player_one, player_two)
+                await Game(self.bot, ctx.message.guild, player_one, player_two).play(ctx)
             else:
                 await ctx.send("Duel declined.")
                 return
