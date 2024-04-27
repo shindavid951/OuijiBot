@@ -2,6 +2,7 @@ from discord.ext import commands
 from game import Game
 from player import Player
 import discord
+import asyncio
 from random import randint
 
 class Ouiji(commands.Cog):
@@ -12,15 +13,17 @@ class Ouiji(commands.Cog):
     async def play(self, ctx: commands.Context, member: discord.Member = None):
         """Ping the user you want to duel!"""
         channel_id = ctx.channel.id
+        # Checks to see if the pinged user is valid
         if member is None:
-            await ctx.send("Ping the person you wish to play against.")
-        elif member == ctx.author:
-            await ctx.send("You can't duel against yourself!")
+            await ctx.send("Usage: !play [ping person you want to duel]")
+        # elif member == ctx.author:
+            # await ctx.send("You can't duel against yourself!")
         elif member == self.bot.user:
             await ctx.send(f"I'd like to duel with you, but I can't. {str(discord.utils.get(self.bot.emojis, name='defeat'))}")
         elif member.bot:
             await ctx.send(f"Beep boop. Shouldn't you play against a real person?")
         else:
+            # Checks to see if the opponent responded to the bot in the right channel
             def check(m):
                 return m.channel.id == channel_id and m.author == member
             await ctx.send(f"{member.display_name}, would you like to duel with {ctx.author.display_name}? Say 'yes' to accept. Any other response will count as a decline.")
